@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Proza+Libre:wght@400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Container Variables */
+  --container: 1170px;
+  --container-full: 100%;
+  --padding-inline-container: 15px;
+  
+  /* Font Variables */
+  --font: "Poppins", sans-serif;
+  --font2: "Proza Libre", sans-serif;
+  
+  /* Title Typography */
+  --title-font-size: 40px;
+  --title-line-height: 52px;
+  --title-letter-spacing: 2px;
+  --title-font-normal: 400;
+  --title-font-bold: 700;
+  
+  /* Subtitle Typography */
+  --subtitle-font-size: 14px;
+  --subtitle-line-height: 22.4px;
+  --subtitle-letter-spacing: 3px;
+  --subtitle-font-normal: 400;
+  
+  /* Paragraph Typography */
+  --para-font-size: 18px;
+  --para-line-height: 24px;
+  --para-font-normal: 400;
+  
+  /* Color Variables */
+  --black: #000;
+  --white: #fff;
+  --light-gray: #efefef;
+  --deeppink: #ed2b7b;
+  --lightblue: #29aae1;
+  --deeporange: #ef4136;
+  --purple: #91278f;
+  --green: #8cc63f;
+  --orange: #f7931d;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+
+    font-family: var(--font);
+    background-color: var(--white);
+    color: var(--black);
+  }
+}
+
+/* Custom Container Classes */
+.container-custom {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding-left: var(--padding-inline-container);
+  padding-right: var(--padding-inline-container);
+}
+
+.container-full {
+  width: var(--container-full);
+}
+
+/* Typography Classes */
+.title {
+  font-family: var(--font);
+  font-size: var(--title-font-size);
+  line-height: var(--title-line-height);
+  letter-spacing: var(--title-letter-spacing);
+  font-weight: var(--title-font-bold);
+}
+
+.subtitle {
+  font-family: var(--font);
+  font-size: var(--subtitle-font-size);
+  line-height: var(--subtitle-line-height);
+  letter-spacing: var(--subtitle-letter-spacing);
+  font-weight: var(--subtitle-font-normal);
+  text-transform: uppercase;
+}
+
+.para {
+  font-family: var(--font2);
+  font-size: var(--para-font-size);
+  line-height: var(--para-line-height);
+  font-weight: var(--para-font-normal);
+}
+
+/* Button Styles */
+.btn-primary {
+  background-color: var(--deeppink);
+  color: var(--white);
+  padding: 12px 30px;
+  border: none;
+  font-family: var(--font);
+  font-weight: var(--title-font-bold);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--purple);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: var(--lightblue);
+  color: var(--white);
+  padding: 12px 30px;
+  border: none;
+  font-family: var(--font);
+  font-weight: var(--title-font-bold);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: var(--deeporange);
+  transform: translateY(-2px);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--light-gray);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--deeppink);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--purple);
+}
